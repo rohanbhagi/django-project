@@ -7,15 +7,14 @@ export default class App extends Component {
   }
 
   render() {
-    return <h1>testing react code</h1>;
+    return <h1>{this.props.name}</h1>;
   }
 }
 
 const appDiv = document.getElementById("app");
 if (appDiv) {
-  console.log(appDiv);
   const root = createRoot(appDiv);
-  root.render(<App />);
+  root.render(<App name="hello world" />);
 } else {
   console.log("Element not found");
 }
