@@ -14,9 +14,7 @@ export default class App extends Component {
     return (
       <Router>
         <Routes>
-          <Route exact path="/">
-            This is the home page
-          </Route>
+          <Route exact path="/" Component={HomePage}></Route>
           <Route path="/join" Component={RoomJoinPage} />
           <Route path="/create" Component={CreateRoomPage} />
         </Routes>
