@@ -39,6 +39,8 @@ class CreateRoomView(APIView):
 
             return Response(RoomSerializer(room).data, status=status.HTTP_201_CREATED)
 
+        return Response({'Bad Request: Invlaid data...'}, status=status.HTTP_400_BAD_REQUEST)
+
 
 
 
